@@ -1,0 +1,22 @@
+{
+  "name": "weatherdash-collector",
+  "version": "1.0.0",
+  "description": "Weatherdash-collector miniservice",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "./node_modules/.bin/nodemon -L index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "ssh://git@git.maxemiliang.cloud:10022/maxemiliang/weatherdash-collector.git"
+  },
+  "author": "Maxemilian Grönblom <maxemiliang@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "@sentry/node": "^5.0.3",
+    "nodemon": "^1.19.0",
+    "openweather-apis": "^4.0.0",
+    "request": "^2.88.0"
+  }
+}

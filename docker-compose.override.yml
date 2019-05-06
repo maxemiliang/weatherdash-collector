@@ -1,0 +1,8 @@
+version: '3'
+services:
+  weatherdash-collector:
+    env_file: .env
+    volumes:
+      - .:/app/
+      - ./node_modules/:/app/node_modules
+    command: npm run start
