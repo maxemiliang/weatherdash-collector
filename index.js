@@ -29,7 +29,7 @@ function sendWeatherData() {
         throw err;
       })
       .on('response', res => {
-        console.log(res.statusCode);
+        console.log(`Sent sensor data: ${res.statusCode}`);
         setTimeout(sendWeatherData, 10000);
       });
   });
