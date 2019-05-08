@@ -29,7 +29,9 @@ function sendWeatherData() {
         throw err;
       })
       .on('response', res => {
-        console.log(`Sent sensor data: ${res.statusCode}`);
+        console.log(
+          `[${new Date().toISOString()}] - Sent api data: ${res.statusCode}`
+        );
         setTimeout(sendWeatherData, 10000);
       });
   });
