@@ -1,9 +1,12 @@
 const weather = require('openweather-apis');
 const request = require('request');
 const Sentry = require('@sentry/node');
-Sentry.init({
-  dsn: 'https://46f8a628a3204922bd252bae072ddb9b@sentry.maxemiliang.cloud/4'
-});
+
+if (process.env.SENTRY_ENABLED) {
+  Sentry.init({
+    dsn: 'https://46f8a628a3204922bd252bae072ddb9b@sentry.maxemiliang.cloud/4'
+  });
+}
 
 weather.setLang('en');
 weather.setCityId(633679);
