@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="b6c15fae-55b4-41c7-abb9-2ac3dcf20bde" xsi:noNamespaceSchemaLocation="https://www.jetbrains.com/teamcity/schemas/2018.1/project-config.xsd">
+  <name>Weatherdash-collector</name>
+  <parameters />
+  <project-extensions>
+    <extension id="PROJECT_EXT_12" type="OAuthProvider">
+      <parameters>
+        <param name="displayName" value="Docker Registry" />
+        <param name="providerType" value="Docker" />
+        <param name="repositoryUrl" value="https://registry.maxemiliang.me" />
+        <param name="secure:userPass" value="credentialsJSON:63c9be1a-d730-418f-a79b-5b8d12d36259" />
+        <param name="userName" value="maxemiliang" />
+      </parameters>
+    </extension>
+    <extension id="PROJECT_EXT_15" type="versionedSettings">
+      <parameters>
+        <param name="buildSettings" value="ALWAYS_USE_CURRENT" />
+        <param name="credentialsStorageType" value="credentialsJSON" />
+        <param name="enabled" value="true" />
+        <param name="rootId" value="WeatherdashCollector_HttpsGitMaxemiliangCloudMaxemiliangWeatherdashCollectorGitR" />
+        <param name="showChanges" value="false" />
+      </parameters>
+    </extension>
+  </project-extensions>
+  <cleanup />
+</project>
+
