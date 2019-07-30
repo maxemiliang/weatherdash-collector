@@ -94,6 +94,14 @@ docker-compose up -d]]></param>
       <extension id="perfmon" type="perfmon">
         <parameters />
       </extension>
+      <extension id="BUILD_EXT_11" type="commit-status-publisher">
+        <parameters>
+          <param name="gitlabApiUrl" value="https://git.maxemiliang.cloud/api/v4" />
+          <param name="publisherId" value="gitlabStatusPublisher" />
+          <param name="secure:gitlabAccessToken" value="credentialsJSON:0c646d90-da38-4803-8860-7169b0fb4c36" />
+          <param name="vcsRootId" value="WeatherdashCollector_HttpsGitMaxemiliangCloudMaxemiliangWeatherdashCollectorGitR" />
+        </parameters>
+      </extension>
     </build-extensions>
     <cleanup />
   </settings>
