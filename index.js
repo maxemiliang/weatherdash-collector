@@ -4,7 +4,8 @@ const Sentry = require('@sentry/node');
 
 if (process.env.SENTRY_ENABLED) {
   Sentry.init({
-    dsn: 'https://46f8a628a3204922bd252bae072ddb9b@sentry.maxemiliang.cloud/4'
+    dsn: 'https://46f8a628a3204922bd252bae072ddb9b@sentry.maxemiliang.cloud/4',
+    environment: 'production'
   });
 }
 
