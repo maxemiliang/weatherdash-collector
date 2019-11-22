@@ -48,12 +48,16 @@ docker-compose up -d]]></param>
       </runner>
       <runner id="RUNNER_9" name="Push release number to sentry" type="simpleRunner">
         <parameters>
-          <param name="plugin.docker.imageId" value="appropriate/curl:latest" />
+          <param name="plugin.docker.imageId" value="getsentry/sentry-cli:latest" />
           <param name="plugin.docker.imagePlatform" value="linux" />
-          <param name="script.content"><![CDATA[curl https://sentry.maxemiliang.cloud/api/hooks/release/builtin/4/1c39fb110e53f5756d18852b8ea818a0fb6e8f3b65313b2af44080a3cc41d115/ \
-  -X POST \
-  -H 'Content-Type: application/json' \
-  -d '{"version": "build-%build.counter%"}']]></param>
+          <param name="script.content"><![CDATA[VERSION=build-%build.counter%
+# Create a release
+sentry-cli releases new -p %system.teamcity.projectName% $VERSION
+
+# Associate commits with the release
+sentry-cli releases set-commits --auto $VERSION
+
+sentry-cli releases deploys $VERSION new -e production]]></param>
           <param name="teamcity.step.mode" value="default" />
           <param name="use.custom.script" value="true" />
         </parameters>
