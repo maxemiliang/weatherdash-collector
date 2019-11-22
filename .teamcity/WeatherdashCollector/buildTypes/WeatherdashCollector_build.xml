@@ -50,6 +50,7 @@ docker-compose up -d]]></param>
         <parameters>
           <param name="plugin.docker.imageId" value="getsentry/sentry-cli:latest" />
           <param name="plugin.docker.imagePlatform" value="linux" />
+          <param name="plugin.docker.pull.enabled" value="true" />
           <param name="script.content"><![CDATA[VERSION=build-%build.counter%
 # Create a release
 sentry-cli releases new -p %system.teamcity.projectName% $VERSION
