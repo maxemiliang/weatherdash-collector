@@ -7,7 +7,9 @@
       <option name="allowExternalStatus" value="true" />
       <option name="maximumNumberOfBuilds" value="1" />
     </options>
-    <parameters />
+    <parameters>
+      <param name="env.SENTRY_AUTH_TOKEN" value="credentialsJSON:1dc535ae-7d20-4dba-a465-024daafd6474" spec="password display='hidden' readOnly='true'" />
+    </parameters>
     <build-runners>
       <runner id="RUNNER_5" name="" type="DockerCommand">
         <parameters>
